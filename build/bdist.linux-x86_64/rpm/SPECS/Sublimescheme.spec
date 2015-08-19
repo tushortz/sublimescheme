@@ -1,6 +1,6 @@
 %define name Sublimescheme
-%define version 1.0.5
-%define unmangled_version 1.0.5
+%define version 1.0.6
+%define unmangled_version 1.0.6
 %define release 1
 
 Summary: Easily create a Sublime text Color Scheme with as little as six lines of code
@@ -52,7 +52,7 @@ Contains a class **Make** that takes two arguments ``(Theme name)`` and ``(Autho
 * body() --> This is completely optional and is the main area for your color scheme customization. You can add as many body methods as possible. ``If none is given, you will have a slighly customized theme similar to Python's IDLE theme``.
 * complete() --> This completes the theme.
 * readme() --> Although completely optional, it generates a README.md file and this is useful if you want to publish it.
-* package() --> Although completely optional, it creates a packages.json file which is useful if you want to share your theme on the `Package control website <http://www.packagecontrol.io>`_
+* package() --> Although completely optional, it creates a packages.json file which is useful if you want to share your theme on the `Package control website <https://packagecontrol.io/>`_
 
 Example1
 """"""""

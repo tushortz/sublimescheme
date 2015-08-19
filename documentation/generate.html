@@ -1014,17 +1014,8 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
-</style><title>README</title></head><body><article class="markdown-body"><h1 id="sublimescheme"><a name="user-content-sublimescheme" href="#sublimescheme" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SublimeScheme</h1>
-<p>SublimeScheme allows you to easily create a Sublime text Color Scheme with a minimum of six lines of code.</p>
-<h2 id="installation"><a name="user-content-installation" href="#installation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installation</h2>
-<pre><code class="python">   pip install sublimescheme
-</code></pre>
-
-<blockquote>
-<p>or otherwise download the zipped file or executable from <a href="https://pypi.python.org/pypi/sublimescheme">the Python Packaging index</a></p>
-</blockquote>
-<h2 id="modules"><a name="user-content-modules" href="#modules" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Modules</h2>
-<h3 id="generate"><a name="user-content-generate" href="#generate" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Generate</h3>
+</style><title>generate</title></head><body><article class="markdown-body"><h1 id="sublimescheme"><a href="///C://Users/Taiwo%20Kareem/Desktop/sublimescheme/documentation/index.html">Sublimescheme </a></h1>
+<h2 id="generate"><a href="///C://Users/Taiwo%20Kareem/Desktop/sublimescheme/documentation/generate.html">Generate</a></h2>
 <p>Contains a class <strong>Make</strong> that takes two arguments <code>(Theme name)</code> and <code>(Author's name)</code></p>
 <p><strong>Make</strong> has six methods which are:</p>
 <ul>
@@ -1035,7 +1026,7 @@ body .markdown-body
 <li>readme() &ndash;&gt; Although completely optional, it generates a README.md file and this is useful if you want to publish it.</li>
 <li>package() &ndash;&gt; Although completely optional, it creates a packages.json file which is useful if you want to share your theme on the <a href="https://packagecontrol.io">Package control website</a></li>
 </ul>
-<h4 id="example1"><a name="user-content-example1" href="#example1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example1</h4>
+<h4 id="example"><a name="user-content-example" href="#example" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example</h4>
 <pre><code class="python">
     from sublimescheme.generate import *        #or
     from sublimescheme.generate import Make
@@ -1054,67 +1045,14 @@ body .markdown-body
 </code></pre>
 
 <h4 id="result1"><a name="user-content-result1" href="#result1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Result1</h4>
-<pre><code class="python">
-    It will generate a python IDLE lookalike with an extra Ruby number highlighter.
-
+<p>```python</p>
+<pre><code>It will generate a python IDLE lookalike with an extra Ruby number highlighter.
 </code></pre>
-
-<h3 id="scopes"><a name="user-content-scopes" href="#scopes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Scopes</h3>
-<p>The <strong>Scopes</strong> module has 162 methods for showing several programming language scopes. The most important of all is the <strong>scopes</strong> method which lists all the 161 programming language supported. You can also view all the scopes directly on <a href="https://github.com/tushortz/scopes">Github</a>. You can then call your desired programming language name to see all the syntax highlight scopes it supports.</p>
-<h4 id="example2"><a name="user-content-example2" href="#example2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example2</h4>
-<pre><code class="python">
-    from sublimescheme.scopes import *      #or
-    from sublimescheme.scopes import scopes
-
-    print(&quot;all scopes&quot;)
-    scopes()
-
-    print(&quot;C++ Scopes&quot;)
-    cpp()
-
-</code></pre>
-
-<h4 id="result2"><a name="user-content-result2" href="#result2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Result2</h4>
-<pre><code class="python">
-    all scopes
-    Scope Name: scope
-    =================
-    Actionscript: source.actionscript
-    Active4D: source.active4d
-    Active4D_Html: text.html.strict.active4d
-    Active4D_Ini: text.active4d-ini
-    Active4D_Library: source.active4d.library
-    Ada: source.ada
-
-    .... etc ......
-
-
-    C++ scopes
-    C++ 
-    ===
-    Scope name: source.c++
-
-    C++
-    entity.name.function.c
-    keyword.control.c++
-    keyword.operator.c++
-    keyword.operator.cast.c++
-    meta.function.constructor.c++
-    meta.function.destructor.c++
-    meta.function.destructor.prototype.c++
-
-    ..... etc ......
-</code></pre>
-
-<h2 id="using-locally"><a name="user-content-using-locally" href="#using-locally" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Using locally</h2>
-<p>If you just want to use it locally, copy your generated <code>.tmTheme</code> into the sublime text packages </p>
-<pre><code>`Packages` --&gt; `Color Scheme - Default`.
-</code></pre>
-<p>You will then be able to use it by going to:</p>
-<pre><code>`Preferences` --&gt; `Color Scheme - Default` --&gt; `Themename`
-</code></pre>
-<h2 id="acknowledgements"><a name="user-content-acknowledgements" href="#acknowledgements" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Acknowledgements</h2>
-<p>I was inspired to write this package after creating my own Sublime text color scheme called <a href="https://packagecontrol.io/packages/Wildlife">Wildlife</a>. It was a really tedious and energy drenching job but thank God this is now available for anyone and makes things easier to use.</p>
-<p>All glory belongs to God for helping me in completing this. Without him, this couldn&rsquo;t have been written by me.</p>
-<h2 id="contact"><a name="user-content-contact" href="#contact" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Contact</h2>
-<p>If further information or if help is needed, feel free to contact me on my email at <a href="mailto:taiwo.kareem36@gmail.com">taiwo.kareem36@gmail.com</a></p></article></body></html>
+<p><br/><br/></p>
+<h3 id="table-of-contents"><strong>Table of contents</strong></h3>
+<ul>
+<li><a href="///C://Users/Taiwo%20Kareem/Desktop/sublimescheme/documentation/index.html">Homepage</a></li>
+<li><a href="scope.html">Scopes</a></li>
+<li><a href="///C://Users/Taiwo%20Kareem/Desktop/sublimescheme/documentation/generate.html">Generate</a></li>
+<li><a href="///C://Users/Taiwo%20Kareem/Desktop/sublimescheme/documentation/walkthrough.html">Walkthrough</a></li>
+</ul></article></body></html>

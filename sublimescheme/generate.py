@@ -178,7 +178,7 @@ class Make():
 
 		img = "\n"
 		if len(screenshot) > 4:
-			img = "## Screenshot\n![{} Screenshot preview](./{})".format(self.maindir, screenshot)
+			img = "## Screenshot\n![{} Screenshot preview](./{})\n\n".format(self.maindir, screenshot)
 
 		about = "## About\n{}\n\n".format(_about)
 		inst = "## Installation\nOpen `Tools -> Command Palette...`. Search for `Package Control: Install Package` and click enter. Wait for the available packages to show up and then search for `{}`. Click enter and the color scheme should be installed.\n\n".format(self.maindir)
