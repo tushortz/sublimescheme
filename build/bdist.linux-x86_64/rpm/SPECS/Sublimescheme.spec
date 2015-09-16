@@ -1,6 +1,6 @@
 %define name Sublimescheme
-%define version 1.0.6
-%define unmangled_version 1.0.6
+%define version 1.0.7
+%define unmangled_version 1.0.7
 %define release 1
 
 Summary: Easily create a Sublime text Color Scheme with as little as six lines of code

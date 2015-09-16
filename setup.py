@@ -12,7 +12,7 @@ from distutils.core import setup
 
 setup(
 	name='Sublimescheme',
-	version='1.0.6',
+	version='1.0.7',
 	description='Easily create a Sublime text Color Scheme with as little as six lines of code',
 	long_description = open('README').read(),
 	author='Taiwo Kareem',

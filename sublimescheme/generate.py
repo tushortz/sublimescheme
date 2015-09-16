@@ -48,11 +48,16 @@ class Make():
 		print("Main xml heading written")
 		print("TODO: Call .head() on class instance with any params and values")
 		print("e.g. instance.head(fg='#F0F', bg='#0FF')\n")
-		print("options are:\n\tbg --> background")
+		print("options are:\n\tag --> activeGuide")
+		print("\tbg --> background")
 		print("\tct --> caret")
 		print("\tfg --> foreground")
 		print("\tfh --> findHighlight")
 		print("\tfhf --> findHighlightForeground")
+		print("\tgf --> gutterForeground")
+		print("\tgu --> guide")
+		print("\tgut --> gutter")
+		print("\tins --> inactiveSelection")
 		print("\tinv --> invisibles")
 		print("\tlh --> lineHighlight")
 		print("\tsb --> selectionBorder")
@@ -64,6 +69,9 @@ class Make():
 		self.file = open(self.filepath,'a') 
 
 		for x in sorted(options):
+			if x == "ag":
+				_write(self.file, "activeGuide", options[x])
+
 			if x == "bg":
 				_write(self.file, "background", options[x])
 
@@ -78,6 +86,19 @@ class Make():
 
 			if x == "fhf":
 				_write(self.file, "findHighlightForeground", options[x])
+
+			if x == "gf":
+				_write(self.file, "gutterForeground", options[x])
+
+			if x == "gu":
+				_write(self.file, "guide", options[x])
+
+			if x == "gut":
+				_write(self.file, "gutter", options[x])
+
+
+			if x == "ins":
+				_write(self.file,"inactiveSelection", options[x])
 
 			if x == "inv":
 				_write(self.file,"invisibles", options[x])
@@ -190,9 +211,9 @@ class Make():
 		else:
 			contrib = "\n"
 			
-		licsn = "## License\nMIT (c) 2015 {} | {}\n\nThis is free software. It is licensed under the MIT License. Feel free to use this in your own work. However, if you modify and/or redistribute it, please attribute me in some way, and it would be great if you distribute your work under this or a similar license, but it's not required.\n\n".format(self.author, email)
+		licsn = "## License\n\nMIT (c) 2015 {} | {}\n\nThis is free software. It is licensed under the MIT License. Feel free to use this in your own work. However, if you modify and/or redistribute it, please attribute me in some way, and it would be great if you distribute your work under this or a similar license, but it's not required.\n\n".format(self.author, email)
 
-		ack = "## Acknowledgements\nCreated using sublimescheme package by Taiwo Kareem. (https://pypi.python.org/pypi/sublimescheme). \nAll glory belongs to God.\n\n"
+		ack = "## Acknowledgements\n\nCreated using [sublimescheme](https://pypi.python.org/pypi/Sublimescheme) package for Python by [Taiwo Kareem](https://github.com/tushortz). An alternative for Ruby programming language is [Sublimetheme](https://rubygems.org/gems/sublimetheme). \n\nAll glory honour and adoration belongs to God alone.\n\n"
 
 
 		lines = [title, img, about, inst, contrb, licsn, ack]
@@ -230,4 +251,3 @@ class Make():
 		file_.close()
 
 		print("Packages.json file created. Check it to make sure it contains the right data")
-		print("Feel free to delete it too.\n")
